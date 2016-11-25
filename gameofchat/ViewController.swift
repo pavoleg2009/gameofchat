@@ -15,13 +15,24 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
 
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(hangLogout))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        if FIRAuth.auth()?.currentUser?.uid == nil {
+            handleLogout()
+        }
         
     }
 
-    func hangLogout() {
+    func handleLogout() {
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError {
+            print("=== \(logoutError)\n")
+        }
+        
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
     }
 }
+
 
