@@ -8,25 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		2863C1AD1DE409F000D24DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1AC1DE409F000D24DBA /* AppDelegate.swift */; };
-		2863C1AF1DE409F000D24DBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1AE1DE409F000D24DBA /* ViewController.swift */; };
+		2863C1AF1DE409F000D24DBA /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1AE1DE409F000D24DBA /* MessagesController.swift */; };
 		2863C1B21DE409F000D24DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2863C1B01DE409F000D24DBA /* Main.storyboard */; };
 		2863C1B41DE409F000D24DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2863C1B31DE409F000D24DBA /* Assets.xcassets */; };
 		2863C1B71DE409F000D24DBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2863C1B51DE409F000D24DBA /* LaunchScreen.storyboard */; };
 		2863C1C21DE40EFD00D24DBA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1C11DE40EFD00D24DBA /* LoginController.swift */; };
 		2863C1C41DE6E61B00D24DBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2863C1C31DE6E61B00D24DBA /* GoogleService-Info.plist */; };
+		287DC4D91DE98A930046FBAF /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC4D81DE98A930046FBAF /* NewMessageController.swift */; };
+		287DC4DB1DE998230046FBAF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC4DA1DE998230046FBAF /* User.swift */; };
+		287DC4DD1DE99D050046FBAF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287DC4DC1DE99D050046FBAF /* UserCell.swift */; };
 		96AE43E1BC2EB33C4B7AC317 /* Pods_gameofchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19579A36D33EBAA99D0E8D /* Pods_gameofchat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2863C1A91DE409F000D24DBA /* gameofchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameofchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2863C1AC1DE409F000D24DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2863C1AE1DE409F000D24DBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2863C1AE1DE409F000D24DBA /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		2863C1B11DE409F000D24DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2863C1B31DE409F000D24DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2863C1B61DE409F000D24DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2863C1B81DE409F000D24DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2863C1C11DE40EFD00D24DBA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2863C1C31DE6E61B00D24DBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		287DC4D81DE98A930046FBAF /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		287DC4DA1DE998230046FBAF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		287DC4DC1DE99D050046FBAF /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		28C36D5A1DE836D600E51476 /* gameofchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gameofchat.entitlements; sourceTree = "<group>"; };
 		5BF305ADE5E5FF12BD474978 /* Pods-gameofchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gameofchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-gameofchat/Pods-gameofchat.release.xcconfig"; sourceTree = "<group>"; };
 		8E19579A36D33EBAA99D0E8D /* Pods_gameofchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gameofchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +90,8 @@
 			children = (
 				2863C1AC1DE409F000D24DBA /* AppDelegate.swift */,
 				2863C1C11DE40EFD00D24DBA /* LoginController.swift */,
-				2863C1AE1DE409F000D24DBA /* ViewController.swift */,
+				2863C1AE1DE409F000D24DBA /* MessagesController.swift */,
+				287DC4D81DE98A930046FBAF /* NewMessageController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -92,6 +99,7 @@
 		2863C1BF1DE40B6400D24DBA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				287DC4DC1DE99D050046FBAF /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 		2863C1C01DE40B6E00D24DBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				287DC4DA1DE998230046FBAF /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,8 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2863C1AF1DE409F000D24DBA /* ViewController.swift in Sources */,
+				287DC4D91DE98A930046FBAF /* NewMessageController.swift in Sources */,
+				2863C1AF1DE409F000D24DBA /* MessagesController.swift in Sources */,
+				287DC4DD1DE99D050046FBAF /* UserCell.swift in Sources */,
 				2863C1C21DE40EFD00D24DBA /* LoginController.swift in Sources */,
+				287DC4DB1DE998230046FBAF /* User.swift in Sources */,
 				2863C1AD1DE409F000D24DBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
