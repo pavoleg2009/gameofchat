@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginController: UIViewController {
+class LoginController: UIViewController  {
     
     let inputsContainerView: UIView = {
         let view = UIView()
@@ -53,6 +53,7 @@ class LoginController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error != nil {
                 print("===[LoginVC].handleLogin() : Error trying to sign in to Firebase \(error.debugDescription)\n")
+                return
             }
             
             print("===[LoginVC].handleLogin() : Successfully sign in to Firebase\n")
@@ -61,43 +62,6 @@ class LoginController: UIViewController {
         
         
         
-    }
-
-    
-    func handleRegister() {
-        
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text  else {
-            print("===[LoginVC].handleRegister() : username or email or password is empty\n")
-            return
-        }
-        
-        
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-            if error != nil {
-                print("===[LoginVC].handleRegister() : Error creating user in Firebase : \(error.debugDescription)\n")
-                return
-            }
-            
-            // successfully authenticated user
-            
-            guard let uid = user?.uid else {
-                return
-            }
-            
-            let ref = FIRDatabase.database().reference(fromURL: "https://gameofchat-d2a86.firebaseio.com/")
-            let usersReference = ref.child("users").child(uid)
-            //let ref = FIRDatabase.database().reference()
-            let values = ["name": name, "email": email]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if err != nil {
-                    print("===[LoginVC].handleRegister() : \n")
-                    return
-                }
-                
-                self.dismiss(animated: true, completion: nil)
-                print("==[LoginVC].handleRegister() : Save user successfully in Firebase db\n")
-            })
-        })
     }
     
     let nameTextField: UITextField = {
@@ -138,13 +102,16 @@ class LoginController: UIViewController {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    
-    let profileImageView: UIImageView = {
+    // in tutirial author says compiler should require to change "let" to "lazy var" becouse of using "self" in body
+    // in my case compiler hasn't any warnings or errors, BUT handler dosen't work (I think it's even dosent set)
+    lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "default-avatar-catty")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-//        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.contentMode = UIViewContentMode.scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProfileImageViewTapped)))
         return imageView
     }()
     
@@ -204,6 +171,11 @@ class LoginController: UIViewController {
         setupupLoginRegisterSegmintedControl()
         setupProfileImageView()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loginRegisterSegmentedControl.selectedSegmentIndex = 0
+        handleLoginRegisterChange()
     }
     
     func setupupLoginRegisterSegmintedControl(){
