@@ -102,7 +102,7 @@ class LoginController: UIViewController  {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    // in tutirial author says compiler should require to change "let" to "lazy var" becouse of using "self" in body
+    // in tutorial author says compiler should require to change "let" to "lazy var" becouse of using "self" in body
     // in my case compiler hasn't any warnings or errors, BUT handler dosen't work (I think it's even dosent set)
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -174,8 +174,8 @@ class LoginController: UIViewController  {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loginRegisterSegmentedControl.selectedSegmentIndex = 0
-        handleLoginRegisterChange()
+//        loginRegisterSegmentedControl.selectedSegmentIndex = 0
+//        handleLoginRegisterChange()
     }
     
     func setupupLoginRegisterSegmintedControl(){

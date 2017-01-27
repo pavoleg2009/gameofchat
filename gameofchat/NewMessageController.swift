@@ -39,8 +39,6 @@ class NewMessageController: UITableViewController {
                 DispatchQueue.main.async { // or without .main
                     self.tableView.reloadData()
                 }
-                
-                
 
             }
             
@@ -58,22 +56,40 @@ class NewMessageController: UITableViewController {
         return users.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
         
-//        let cell = UITableView(withIdentifier: cellId, for: indexPath)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
-        // let use a hack for now
-//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
+      
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.email
+        if indexPath.row % 2 == 1 {
+            cell.backgroundColor = UIColor(r: 240, g: 240, b: 240)
+        }
+        
+        
+        if let profileImageUrl = user.profileImageUrl {
+            let url = URL(string: profileImageUrl)
+            URLSession.shared.dataTask(with: url!) { (data, response, error) in
+                
+                if error != nil {
+                    print("===[NewMessageController]\(error)\n")
+                    return
+                }
+                
+                
+                let queue = DispatchQueue(label: "com.just-eng.gameofchat", qos: DispatchQoS.default, target: nil)
+                queue.async {
+                   cell.profileImageView.image = UIImage(data: data!)
+                }
+                
+            }.resume()
+        }
         
         return cell
-        
-        
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
 }

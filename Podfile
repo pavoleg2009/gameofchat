@@ -6,9 +6,7 @@ target 'gameofchat' do
   use_frameworks!
 
   # Pods for gameofchat
-
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
-pod 'Firebase/Storage'
-
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 end

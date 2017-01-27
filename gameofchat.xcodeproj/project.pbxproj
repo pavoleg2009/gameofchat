@@ -139,12 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2863C1BB1DE409F000D24DBA /* Build configuration list for PBXNativeTarget "gameofchat" */;
 			buildPhases = (
-				304F2EE2BFBF39D9472CBADB /* [CP] Check Pods Manifest.lock */,
+				28AC25634B6D6F03A6D4A0EA /* [CP] Check Pods Manifest.lock */,
 				2863C1A51DE409F000D24DBA /* Sources */,
 				2863C1A61DE409F000D24DBA /* Frameworks */,
 				2863C1A71DE409F000D24DBA /* Resources */,
 				9520379C44B6D432F894997D /* [CP] Embed Pods Frameworks */,
-				B1E20C6DAF45F09D4A7E3E6A /* [CP] Copy Pods Resources */,
+				DE69DD21F1F83E1F5FAB61D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,7 +162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Oleg Pavlichenkov";
 				TargetAttributes = {
 					2863C1A81DE409F000D24DBA = {
@@ -210,7 +210,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		304F2EE2BFBF39D9472CBADB /* [CP] Check Pods Manifest.lock */ = {
+		28AC25634B6D6F03A6D4A0EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,7 +240,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gameofchat/Pods-gameofchat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B1E20C6DAF45F09D4A7E3E6A /* [CP] Copy Pods Resources */ = {
+		DE69DD21F1F83E1F5FAB61D1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,6 +312,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -361,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

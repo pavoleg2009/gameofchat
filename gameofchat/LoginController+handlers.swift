@@ -65,7 +65,12 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             let storageRef = FIRStorage.storage().reference().child("profileImages").child("\(imageName).png")
             
             if let uploadDate = UIImagePNGRepresentation(self.profileImageView.image!) {
-                storageRef.put(uploadDate, metadata: nil, completion: { (metadata, error) in
+              
+              // TODO: add metadata for 
+                let metadata = FIRStorageMetadata()
+                metadata.contentType = "image/jpeg"
+              
+                storageRef.put(uploadDate, metadata: metadata, completion: { (metadata, error) in
                     
                     if error != nil {
                         print("\(error)")
