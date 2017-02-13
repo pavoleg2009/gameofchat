@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2806F8F11E3AFA1100B102D8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2806F8F01E3AFA1100B102D8 /* Extentions.swift */; };
 		2863C1AD1DE409F000D24DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1AC1DE409F000D24DBA /* AppDelegate.swift */; };
 		2863C1AF1DE409F000D24DBA /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2863C1AE1DE409F000D24DBA /* MessagesController.swift */; };
 		2863C1B21DE409F000D24DBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2863C1B01DE409F000D24DBA /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2806F8F01E3AFA1100B102D8 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		2863C1A91DE409F000D24DBA /* gameofchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gameofchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2863C1AC1DE409F000D24DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2863C1AE1DE409F000D24DBA /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2806F8EF1E3AF9E900B102D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2806F8F01E3AFA1100B102D8 /* Extentions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2863C1A01DE409F000D24DBA = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		2863C1AB1DE409F000D24DBA /* gameofchat */ = {
 			isa = PBXGroup;
 			children = (
+				2806F8EF1E3AF9E900B102D8 /* Helpers */,
 				28C36D5A1DE836D600E51476 /* gameofchat.entitlements */,
 				2863C1C01DE40B6E00D24DBA /* Model */,
 				2863C1BF1DE40B6400D24DBA /* View */,
@@ -266,6 +277,7 @@
 				2863C1AF1DE409F000D24DBA /* MessagesController.swift in Sources */,
 				287DC4DD1DE99D050046FBAF /* UserCell.swift in Sources */,
 				2863C1C21DE40EFD00D24DBA /* LoginController.swift in Sources */,
+				2806F8F11E3AFA1100B102D8 /* Extentions.swift in Sources */,
 				28AF96731DEF25A500A249CF /* LoginController+handlers.swift in Sources */,
 				287DC4DB1DE998230046FBAF /* User.swift in Sources */,
 				2863C1AD1DE409F000D24DBA /* AppDelegate.swift in Sources */,
